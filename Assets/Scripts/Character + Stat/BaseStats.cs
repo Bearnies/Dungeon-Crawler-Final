@@ -31,6 +31,14 @@ public class BaseStats : MonoBehaviour
         this.StatDescription = statDescription;
     }
 
+    [Newtonsoft.Json.JsonConstructor]
+    public BaseStats(int baseValue, string statName)
+    {
+        this.BaseAdditives = new List<BonusStats>();
+        this.BaseValue = baseValue;
+        this.StatName = statName;
+    }
+
     public void AddBonusStats(BonusStats bonusStats)
     {
         this.BaseAdditives.Add(bonusStats);

@@ -8,14 +8,10 @@ using UnityEngine.AI;
 public class WorldInteraction : MonoBehaviour
 {
     NavMeshAgent playerAgent;
-    //Camera cam;
-    //PlayerMotor motor;
 
     // Start is called before the first frame update
     void Start()
     {
-        //cam = Camera.main;
-        //motor = GetComponent<PlayerMotor>();
         playerAgent = GetComponent<NavMeshAgent>();   
     }
 

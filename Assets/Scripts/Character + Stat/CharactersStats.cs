@@ -11,8 +11,8 @@ public class CharactersStats : MonoBehaviour
     {
         stats.Add(new BaseStats(4, "Attack", "Your attack power"));
         stats.Add(new BaseStats(0, "Defense", "Your defense power"));
-        stats.Add(new BaseStats(100, "Health Point", "Your health"));
-        stats.Add(new BaseStats(100, "Mana Point", "Your mana"));
+        stats.Add(new BaseStats(100, "Health", "Your health"));
+        stats.Add(new BaseStats(100, "Mana", "Your mana"));
     }
 
     // Update is called once per frame
