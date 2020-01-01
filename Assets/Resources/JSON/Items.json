@@ -8,12 +8,19 @@
         "ItemModifier": 0,
         "Stats": [
             {
-                "BaseValue": 2,
+                "StatType": "Attack",
+                "BaseValue": 25,
                 "StatName": "Attack"
             },
             {
+                "StatType": "Defense",
                 "BaseValue": 4,
-                "StatName": "Health"
+                "StatName": "Defense"
+            },
+            {
+                "StatType": "AttackSpeed",
+                "BaseValue": 4,
+                "StatName": "Attack Speed"
             }
         ]
     },

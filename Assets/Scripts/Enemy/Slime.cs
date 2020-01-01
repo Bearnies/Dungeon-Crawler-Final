@@ -8,9 +8,12 @@ public class Slime : MonoBehaviour, IEnemy
     public float currentHealth, attack, defense;
     public float maxHealth;
 
+    private CharactersStats charactersStats;
+
     // Start is called before the first frame update
     void Start()
     {
+        charactersStats = new CharactersStats(6, 10, 2);
         currentHealth = maxHealth;
     }
 

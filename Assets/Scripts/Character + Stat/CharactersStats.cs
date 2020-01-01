@@ -6,26 +6,26 @@ public class CharactersStats : MonoBehaviour
 {
     public List<BaseStats> stats = new List<BaseStats>();
 
-    // Start is called before the first frame update
-    void Start()
+    public CharactersStats(int attack, int defense, int attackSpeed)
     {
-        stats.Add(new BaseStats(4, "Attack", "Your attack power"));
-        stats.Add(new BaseStats(0, "Defense", "Your defense power"));
-        stats.Add(new BaseStats(100, "Health", "Your health"));
-        stats.Add(new BaseStats(100, "Mana", "Your mana"));
+        stats = new List<BaseStats>()
+        {
+            new BaseStats(BaseStats.BaseStatType.Attack, attack, "Attack"),
+            new BaseStats(BaseStats.BaseStatType.Defense, defense, "Defense"),
+            new BaseStats(BaseStats.BaseStatType.AttackSpeed, attackSpeed, "Attack Speed")
+        };
     }
 
-    // Update is called once per frame
-    void Update()
+    public BaseStats GetStat(BaseStats.BaseStatType stat)
     {
-        
+        return this.stats.Find(x => x.StatType == stat);
     }
 
     public void AddBonusStats(List<BaseStats> bonusStats) //Add Bonus stats from equipments
     {
         foreach(BaseStats bonusStat in bonusStats)
         {
-            stats.Find(x => x.StatName == bonusStat.StatName).AddBonusStats(new BonusStats(bonusStat.BaseValue));
+            GetStat(bonusStat.StatType).AddBonusStats(new BonusStats(bonusStat.BaseValue));
         }
     }
 
@@ -33,7 +33,7 @@ public class CharactersStats : MonoBehaviour
     {
         foreach (BaseStats bonusStat in bonusStats)
         {
-            stats.Find(x => x.StatName == bonusStat.StatName).RemoveBonusStats(new BonusStats(bonusStat.BaseValue));
+            GetStat(bonusStat.StatType).RemoveBonusStats(new BonusStats(bonusStat.BaseValue));
         }
     }
 }

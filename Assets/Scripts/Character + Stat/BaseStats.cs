@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 public class BaseStats : MonoBehaviour
 {
-    public List<BonusStats> BaseAdditives { get; set; }
+    public enum BaseStatType { Attack, Defense, AttackSpeed }
 
+    public List<BonusStats> BaseAdditives { get; set; }
+    [JsonConverter(typeof(StringEnumConverter))]
+    public BaseStatType StatType { get; set; }
     public int BaseValue { get; set; } //Startup Stats
     public int FinalValue { get; set; } //Final Stats with bonus from equipments
     public string StatName { get; set; }
@@ -32,9 +38,10 @@ public class BaseStats : MonoBehaviour
     }
 
     [Newtonsoft.Json.JsonConstructor]
-    public BaseStats(int baseValue, string statName)
+    public BaseStats(BaseStatType statType, int baseValue, string statName)
     {
         this.BaseAdditives = new List<BonusStats>();
+        this.StatType = statType;
         this.BaseValue = baseValue;
         this.StatName = statName;
     }

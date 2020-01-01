@@ -6,16 +6,9 @@ public class ConsumableController : MonoBehaviour
 {
     CharactersStats stats;
 
-    // Start is called before the first frame update
     void Start()
     {
-        stats = GetComponent<CharactersStats>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        stats = GetComponent<Player>().charactersStats;
     }
 
     public void ConsumeItem(Item item)

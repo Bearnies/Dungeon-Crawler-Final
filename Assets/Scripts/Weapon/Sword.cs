@@ -5,8 +5,8 @@ using UnityEngine;
 public class Sword : MonoBehaviour, IWeapon
 {
     public List<BaseStats> Stats { get; set; }
-
     private Animator animator;
+    public CharactersStats charactersStats { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +36,7 @@ public class Sword : MonoBehaviour, IWeapon
     {
         if (collider.tag == "Enemy")
         {
-            collider.GetComponent<IEnemy>().TakeDamage(Stats[0].GetCalculatedValue());
+            collider.GetComponent<IEnemy>().TakeDamage(charactersStats.GetStat(BaseStats.BaseStatType.Attack).GetCalculatedValue());
         }
     }
 }

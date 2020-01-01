@@ -60,12 +60,8 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Character + Stat\BaseStats.cs" />
     <Compile Include="Assets\Scripts\Character + Stat\BonusStats.cs" />
-    <Compile Include="Assets\Scripts\Character + Stat\CharacterCombat.cs" />
     <Compile Include="Assets\Scripts\Character + Stat\CharactersStats.cs" />
-    <Compile Include="Assets\Scripts\Character + Stat\CharacterStats.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\Enemy\IEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\Slime.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
@@ -80,11 +76,10 @@
     <Compile Include="Assets\Scripts\Inventory\PickupItem.cs" />
     <Compile Include="Assets\Scripts\Inventory\PotionLog.cs" />
     <Compile Include="Assets\Scripts\Inventory\UIEventHandler.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerHealthBar.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMotor.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerToMouse.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerWeaponController.cs" />
     <Compile Include="Assets\Scripts\Player\WorldInteraction.cs" />

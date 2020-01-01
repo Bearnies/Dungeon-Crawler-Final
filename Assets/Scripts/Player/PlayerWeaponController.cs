@@ -7,17 +7,17 @@ public class PlayerWeaponController : MonoBehaviour
     public GameObject playerHand;
     public GameObject EquippedWeapon { get; set; }
 
-    CharactersStats charactersStats;
-
-    IWeapon equippingWeapon; //Save a couple of calls below
+    IWeapon equippedWeapon; //Save a couple of calls below
 
     Transform spawnProjectile;
+
+    CharactersStats charactersStats;
 
     // Start is called before the first frame update
     void Start()
     {
-        charactersStats = GetComponent<CharactersStats>();
         spawnProjectile = transform.Find("ProjectileSpawn"); //FindChild
+        charactersStats = GetComponent<Player>().charactersStats;
     }
 
     // Update is called once per frame
@@ -47,8 +47,7 @@ public class PlayerWeaponController : MonoBehaviour
         //Get the prefab named "Sword" from the "Resources" folder and set the weapon to the player's hand
         //The item is named "Sword" in InventoryController and this line will get the exact prefab for it 
 
-        equippingWeapon = EquippedWeapon.GetComponent<IWeapon>();
-
+        equippedWeapon = EquippedWeapon.GetComponent<IWeapon>();
 
         if (EquippedWeapon.GetComponent<IProjectileWeapon>() != null) //Sword can't cast fireball
         {
@@ -56,22 +55,24 @@ public class PlayerWeaponController : MonoBehaviour
         }
 
 
-        equippingWeapon.Stats = itemToEquip.Stats; //EquippedWeapon.GetComponent<IWeapon>().Stats; //Get stats from the weapon
+        equippedWeapon.Stats = itemToEquip.Stats; //EquippedWeapon.GetComponent<IWeapon>().Stats; //Get stats from the weapon
 
         EquippedWeapon.transform.SetParent(playerHand.transform); //Parent to the player's hand
 
         charactersStats.AddBonusStats(itemToEquip.Stats);
 
-        Debug.Log(equippingWeapon.Stats[0].GetCalculatedValue());
+        equippedWeapon.charactersStats = charactersStats;
+
+        //Debug.Log(equippingWeapon.Stats[0].GetCalculatedValue());
     }
 
     public void PerformWeaponAttack() //Player performs a weapon attack
     {
-        equippingWeapon.PerformAttack(); //EquippedWeapon.GetComponent<IWeapon>().PerformAttack();
+        equippedWeapon.PerformAttack(); //EquippedWeapon.GetComponent<IWeapon>().PerformAttack();
     }
 
     public void PerformWeaponSpecialAttack() //Player performs a weapon attack
     {
-        equippingWeapon.PerformSpecialAttack(); //EquippedWeapon.GetComponent<IWeapon>().PerformAttack();
+        equippedWeapon.PerformSpecialAttack(); //EquippedWeapon.GetComponent<IWeapon>().PerformAttack();
     }
 }

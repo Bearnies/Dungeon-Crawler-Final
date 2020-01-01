@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Staff : MonoBehaviour, IWeapon, IProjectileWeapon
+public class Staff : MonoBehaviour, IProjectileWeapon, IWeapon
 {
     private Animator animator;
 
@@ -11,6 +11,8 @@ public class Staff : MonoBehaviour, IWeapon, IProjectileWeapon
     public Transform ProjectileSpawn { get; set; }
 
     Fireball fireBall;
+
+    public CharactersStats charactersStats { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +41,7 @@ public class Staff : MonoBehaviour, IWeapon, IProjectileWeapon
     {
         if (collider.tag == "Enemy")
         {
-            collider.GetComponent<IEnemy>().TakeDamage(Stats[0].GetCalculatedValue());
+            collider.GetComponent<IEnemy>().TakeDamage(charactersStats.GetStat(BaseStats.BaseStatType.Attack).GetCalculatedValue());
         }
     }
 
