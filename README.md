@@ -17,7 +17,7 @@
     - Người chơi:   
       + Di chuyển bằng cấm nhấp chuột trái tại một điểm trên khu vực.
       + Tấn công/ tương tác (nhặt vật phẩm) bằng chuột phải.
-      + Bấm I để mở kho đồ, nhấp chuột trái vào trang bị thì sử dụng món trang bị đó, nếu ô đồ đó đã được sử dụng bởi trang bị khác thì hoán đổi (trang bị mới được sử dụng, trang bị cũ quay về kho đồ).
+      + Bấm I để mở kho đồ, nhấp chuột trái vào trang bị thì cho thấy mô tả của trang bị đó, nhấp vào Use để sử dụng món trang bị.
       + Trang bị giúp người chơi có sức tấn công, phòng thủ cao hơn.
       + Tùy vào sức tấn công, phòng thủ mà trừ máu khi tấn công đối thủ hoặc khi bị tấn công.
       + Hiện đang có 2 loại vũ khí: Sword và Staff, Sword đánh tầm gần, Staff có thể triệu hồi cầu lửa tấn công đối thủ
