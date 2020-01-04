@@ -7,6 +7,7 @@ public class Sword : MonoBehaviour, IWeapon
     public List<BaseStats> Stats { get; set; }
     private Animator animator;
     public CharactersStats charactersStats { get; set; }
+    public int CurrentDamage { get; set ; }
 
     // Start is called before the first frame update
     void Start()
@@ -14,15 +15,10 @@ public class Sword : MonoBehaviour, IWeapon
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void PerformAttack()
+    public void PerformAttack(int damage)
     {
         //Debug.Log("Sword Attack !");
+        CurrentDamage = damage;
         animator.SetTrigger("Base_Attack");
     }
 
@@ -36,7 +32,7 @@ public class Sword : MonoBehaviour, IWeapon
     {
         if (collider.tag == "Enemy")
         {
-            collider.GetComponent<IEnemy>().TakeDamage(charactersStats.GetStat(BaseStats.BaseStatType.Attack).GetCalculatedValue());
+            collider.GetComponent<IEnemy>().TakeDamage(CurrentDamage);
         }
     }
 }

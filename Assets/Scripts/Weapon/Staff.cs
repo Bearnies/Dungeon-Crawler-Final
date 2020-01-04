@@ -12,37 +12,24 @@ public class Staff : MonoBehaviour, IProjectileWeapon, IWeapon
 
     Fireball fireBall;
 
-    public CharactersStats charactersStats { get; set; }
+    public int CurrentDamage  { get; set; }
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
         fireBall = Resources.Load<Fireball>("Weapons/Projectiles/Fireball");
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PerformAttack(int damage)
     {
-        
-    }
-
-    public void PerformAttack()
-    {
+        CurrentDamage = damage;
         animator.SetTrigger("Base_Attack");
     }
 
     public void PerformSpecialAttack()
     {
         animator.SetTrigger("Special_Attack");
-    }
-
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.tag == "Enemy")
-        {
-            collider.GetComponent<IEnemy>().TakeDamage(charactersStats.GetStat(BaseStats.BaseStatType.Attack).GetCalculatedValue());
-        }
     }
 
     public void CastProjectile()

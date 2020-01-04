@@ -4,6 +4,8 @@ using UnityEngine;
 
 public interface IEnemy
 {
+    int Experience { get; set; }
+    void Die();
     void TakeDamage(int damageTaken);
     void PerformAttack();
 }

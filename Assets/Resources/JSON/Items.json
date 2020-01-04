@@ -3,7 +3,7 @@
         "ObjectSlug": "Sword",
         "ItemName": "Sword",
         "Description": "A long, sharp blade.",
-        "ItemType":  "Weapon",
+        "ItemType": "Weapon",
         "ActionName": "Equip",
         "ItemModifier": 0,
         "Stats": [
@@ -25,10 +25,35 @@
         ]
     },
     {
+        "ObjectSlug": "Staff",
+        "ItemName": "Staff",
+        "Description": "A magical staff that casts fireball.",
+        "ItemType": "Weapon",
+        "ActionName": "Equip",
+        "ItemModifier": 0,
+        "Stats": [
+            {
+                "StatType": "Attack",
+                "BaseValue": 18,
+                "StatName": "Attack"
+            },
+            {
+                "StatType": "Defense",
+                "BaseValue": 2,
+                "StatName": "Defense"
+            },
+            {
+                "StatType": "AttackSpeed",
+                "BaseValue": 6,
+                "StatName": "Attack Speed"
+            }
+        ]
+    },
+    {
         "ObjectSlug": "Potion_Log",
         "ItemName": "Log Potion",
         "Description": "A potion that logs something to the console.",
-        "ItemType":  "Consumable",
+        "ItemType": "Consumable",
         "ActionName": "Drink",
         "ItemModifier": 0
     }

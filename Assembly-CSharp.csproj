@@ -60,7 +60,9 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Character + Stat\BaseStats.cs" />
     <Compile Include="Assets\Scripts\Character + Stat\BonusStats.cs" />
+    <Compile Include="Assets\Scripts\Character + Stat\CharacterPanel.cs" />
     <Compile Include="Assets\Scripts\Character + Stat\CharactersStats.cs" />
+    <Compile Include="Assets\Scripts\CombatEvents.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Enemy\IEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\Slime.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Assets\Scripts\Inventory\PotionLog.cs" />
     <Compile Include="Assets\Scripts\Inventory\UIEventHandler.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerLevel.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMotor.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
