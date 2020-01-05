@@ -2,23 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickupItem : Interactable
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+public class PickupItem : Interactable {
+    public Item ItemDrop { get; set; }
     public override void Interact()
     {
-        base.Interact();
-        Debug.Log("Picking up an item !");
+        Debug.Log("Picked up some items!");
+        InventoryController.Instance.GiveItem(ItemDrop);
+        Destroy(gameObject);
     }
 }

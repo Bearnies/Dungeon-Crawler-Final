@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +11,8 @@ public class InventoryController : MonoBehaviour
     public Item PotionLog;
 
     public PlayerWeaponController playerWeaponController;
+
+
     public ConsumableController consumableController;
     public static InventoryController Instance { get; set; }
     public List<Item> playerItems = new List<Item>();
@@ -40,7 +43,12 @@ public class InventoryController : MonoBehaviour
     {
         Item item = ItemDatabase.Instance.GetItem(itemSlug);
         playerItems.Add(item);
-        Debug.Log(playerItems.Count + " items in inventory. Added: " + itemSlug);
+        UIEventHandler.ItemAddedToInventory(item);
+    }
+
+    public void GiveItem(Item item)
+    {
+        playerItems.Add(item);
         UIEventHandler.ItemAddedToInventory(item);
     }
 

@@ -10,6 +10,8 @@ public class Slime : MonoBehaviour, IEnemy
     public float currentHealth;
     public float maxHealth;
     public int Experience { get; set; }
+    public DropTable DropTable { get; set; }
+    public PickupItem pickupItem;
 
     private Player player;
     private NavMeshAgent navAgent;
@@ -19,7 +21,14 @@ public class Slime : MonoBehaviour, IEnemy
     // Start is called before the first frame update
     void Start()
     {
-        Experience = 250;
+        DropTable = new DropTable();
+        DropTable.loot = new List<LootDrop>
+        {
+            //25% Drop chance
+            new LootDrop("Potion_Log", 25)
+        };
+
+        Experience = 50;
         navAgent = GetComponent<NavMeshAgent>();
         charactersStats = new CharactersStats(6, 10, 2);
         currentHealth = maxHealth;
@@ -67,7 +76,18 @@ public class Slime : MonoBehaviour, IEnemy
 
     public void Die()
     {
+        DropLoot();
         CombatEvents.EnemyDied(this);
         Destroy(gameObject);
+    }
+
+    void DropLoot()
+    {
+        Item item = DropTable.GetDrop();
+        if (item != null)
+        {
+            PickupItem instance = Instantiate(pickupItem, transform.position, Quaternion.identity);
+            instance.ItemDrop = item;
+        }
     }
 }

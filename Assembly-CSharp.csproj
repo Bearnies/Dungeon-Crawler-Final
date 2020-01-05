@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Character + Stat\CharacterPanel.cs" />
     <Compile Include="Assets\Scripts\Character + Stat\CharactersStats.cs" />
     <Compile Include="Assets\Scripts\CombatEvents.cs" />
+    <Compile Include="Assets\Scripts\DropTable.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Enemy\IEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\Slime.cs" />
