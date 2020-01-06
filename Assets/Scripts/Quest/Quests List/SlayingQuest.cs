@@ -11,9 +11,13 @@ public class SlayingQuest : Quest
         QuestDescription = "Monsters are everywhere, slay some of them !";
         ItemReward = ItemDatabase.Instance.GetItem("Potion_Log");
 
-        QuestGoals.Add(new QuestKillGoal(this, 0, "Kill 5 Slimes", false, 0, 5));
-        QuestGoals.Add(new QuestKillGoal(this, 1, "Kill 1 Spitfire", false, 0, 2));
-
+        QuestGoals = new List<QuestGoal>
+        {
+            new QuestKillGoal(this, 0, "Kill 1 Slime", false, 0, 1),
+            new QuestKillGoal(this, 1, "Kill 1 Spitfire", false, 0, 1)
+            //new QuestCollectionGoal(this, "Potion_Log", "Find a Potion Log", false, 0, 1)
+            //QuestGoals.Add(new QuestCollectionGoal(this, "Potion_Log", "Find a Potion Log", false, 0, 1));
+        };
         QuestGoals.ForEach(g => g.Initialize());
     }
 }

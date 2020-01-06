@@ -13,20 +13,20 @@ public class QuestGiver : NPC
 
     public override void Interact()
     {
-        base.Interact();
         if (!AssignedQuest && !NPCHelped)
         {
+            base.Interact();
             //Give quest to Player
             AssignQuest();
         }
-        else if (AssignedQuest && NPCHelped)
+        else if (AssignedQuest && !NPCHelped)
         {
             //Check if quest is completed
             CheckQuest();
         }
         else
         {
-
+            Dialogue.Instance.AddNewDialogue(name, new string[] {"Hey it's you, thanks again for chasing the monsters away that time !" });
         }
     }
 
@@ -37,6 +37,11 @@ public class QuestGiver : NPC
             Quest.RewardPlayer();
             NPCHelped = true;
             AssignedQuest = false;
+            Dialogue.Instance.AddNewDialogue(name, new string[] {"Thanks for chasing them away ! Take this as my appreciation !"});
+        }
+        else
+        {
+            Dialogue.Instance.AddNewDialogue(name, new string[] {"They're still out there, please help me chase them away !"});
         }
     }
 

@@ -8,6 +8,7 @@ public class QuestKillGoal : QuestGoal
 
     public QuestKillGoal (Quest quest, int enemyid, string description, bool isCompleted, int currentAmount, int requiredAmount)
     {
+        this.Quest = quest;
         this.EnemyId = enemyid;
         this.Description = description;
         this.IsCompleted = isCompleted;

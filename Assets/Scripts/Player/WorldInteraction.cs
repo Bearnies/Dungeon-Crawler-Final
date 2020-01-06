@@ -38,6 +38,7 @@ public class WorldInteraction : MonoBehaviour
             }
             else
             {
+                Dialogue.Instance.dialoguePanel.SetActive(false);
                 playerAgent.stoppingDistance = 0;
                 playerAgent.destination = interactionInfo.point;
             }

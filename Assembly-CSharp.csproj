@@ -64,10 +64,12 @@
     <Compile Include="Assets\Scripts\Character + Stat\CharactersStats.cs" />
     <Compile Include="Assets\Scripts\CombatEvents.cs" />
     <Compile Include="Assets\Scripts\DropTable.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Cyclop.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Enemy\IEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\MonsterSpawner.cs" />
     <Compile Include="Assets\Scripts\Enemy\Slime.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Spitfire.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\Inventory\ConsumableController.cs" />
     <Compile Include="Assets\Scripts\Inventory\IConsumable.cs" />
@@ -90,7 +92,11 @@
     <Compile Include="Assets\Scripts\Player\PlayerToMouse.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerWeaponController.cs" />
     <Compile Include="Assets\Scripts\Player\WorldInteraction.cs" />
+    <Compile Include="Assets\Scripts\Portal\ActionItem.cs" />
+    <Compile Include="Assets\Scripts\Portal\Portal.cs" />
+    <Compile Include="Assets\Scripts\Portal\PortalController.cs" />
     <Compile Include="Assets\Scripts\Quest\Quest.cs" />
+    <Compile Include="Assets\Scripts\Quest\QuestCollectionGoal.cs" />
     <Compile Include="Assets\Scripts\Quest\QuestGiver.cs" />
     <Compile Include="Assets\Scripts\Quest\QuestGoal.cs" />
     <Compile Include="Assets\Scripts\Quest\QuestKillGoal.cs" />

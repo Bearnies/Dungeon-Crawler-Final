@@ -14,15 +14,14 @@ public class QuestGoal
     {
         if (CurrentAmount >= RequiredAmount)
         {
-            IsCompleted = true;
+            QuestComplete();
         }
     }
 
     public void QuestComplete()
     {
-        Quest.CheckQuestGoals();
         IsCompleted = true;
-        Debug.Log("Quest is completed !");
+        Quest.CheckQuestGoals();
     }
 
     public virtual void Initialize()

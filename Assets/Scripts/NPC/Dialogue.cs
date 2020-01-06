@@ -38,8 +38,11 @@ public class Dialogue : MonoBehaviour
     public void AddNewDialogue(string npcName, string[] lines)
     {
         dialogueIndex = 0;
-        dialogueLines = new List<string>(lines);
-        dialogueLines.AddRange(lines);
+        dialogueLines = new List<string>();
+        foreach (string line in lines)
+        {
+            dialogueLines.Add(line);
+        }
         this.npcName = npcName;
         CreateDialogue();
     }
@@ -53,7 +56,7 @@ public class Dialogue : MonoBehaviour
 
     public void ContinueDialogue()
     {
-        if (dialogueIndex < dialogueLines.Count - 4)
+        if (dialogueIndex < dialogueLines.Count - 1)
         {
             dialogueIndex++;
             dialogueText.text = dialogueLines[dialogueIndex];

@@ -5,7 +5,7 @@ using System.Linq;
 
 public class Quest : MonoBehaviour
 {
-    public List<QuestGoal> QuestGoals { get; set; } = new List<QuestGoal>();
+    public List<QuestGoal> QuestGoals { get; set; }
     public string QuestName { get; set; }
     public string QuestDescription { get; set; }
     public int ExperienceReward { get; set; }
