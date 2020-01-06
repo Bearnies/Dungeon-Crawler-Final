@@ -9,6 +9,8 @@ public class Slime : MonoBehaviour, IEnemy
     public LayerMask aggroLayerMask;
     public float currentHealth;
     public float maxHealth;
+    public int Id { get; set; }
+    public MonsterSpawner MonsterSpawner { get; set; }
     public int Experience { get; set; }
     public DropTable DropTable { get; set; }
     public PickupItem pickupItem;
@@ -28,6 +30,7 @@ public class Slime : MonoBehaviour, IEnemy
             new LootDrop("Potion_Log", 25)
         };
 
+        Id = 0;
         Experience = 50;
         navAgent = GetComponent<NavMeshAgent>();
         charactersStats = new CharactersStats(6, 10, 2);
@@ -78,6 +81,7 @@ public class Slime : MonoBehaviour, IEnemy
     {
         DropLoot();
         CombatEvents.EnemyDied(this);
+        this.MonsterSpawner.RespawnMonster();
         Destroy(gameObject);
     }
 

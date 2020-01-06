@@ -6,6 +6,7 @@ public class InventoryUI : MonoBehaviour
 {
     public RectTransform inventoryPanel;
     public RectTransform scrollViewContent;
+    public RectTransform characterPanel;
     InventoryUIItem itemContainer { get; set; }
     bool menuIsActive { get; set; }
     Item currentSelectedItem { get; set; }
@@ -16,6 +17,7 @@ public class InventoryUI : MonoBehaviour
         itemContainer = Resources.Load<InventoryUIItem>("UI/Item_Container");
         UIEventHandler.OnItemAddedToInventory += ItemAdded;
         inventoryPanel.gameObject.SetActive(false);
+        characterPanel.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class InventoryUI : MonoBehaviour
         {
             menuIsActive = !menuIsActive;
             inventoryPanel.gameObject.SetActive(menuIsActive);
+            characterPanel.gameObject.SetActive(menuIsActive);
         }
     }
 

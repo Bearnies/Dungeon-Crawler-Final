@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\DropTable.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Enemy\IEnemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy\MonsterSpawner.cs" />
     <Compile Include="Assets\Scripts\Enemy\Slime.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\Inventory\ConsumableController.cs" />
@@ -79,6 +80,8 @@
     <Compile Include="Assets\Scripts\Inventory\PickupItem.cs" />
     <Compile Include="Assets\Scripts\Inventory\PotionLog.cs" />
     <Compile Include="Assets\Scripts\Inventory\UIEventHandler.cs" />
+    <Compile Include="Assets\Scripts\NPC\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\NPC\NPC.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerLevel.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerManager.cs" />
@@ -87,6 +90,11 @@
     <Compile Include="Assets\Scripts\Player\PlayerToMouse.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerWeaponController.cs" />
     <Compile Include="Assets\Scripts\Player\WorldInteraction.cs" />
+    <Compile Include="Assets\Scripts\Quest\Quest.cs" />
+    <Compile Include="Assets\Scripts\Quest\QuestGiver.cs" />
+    <Compile Include="Assets\Scripts\Quest\QuestGoal.cs" />
+    <Compile Include="Assets\Scripts\Quest\QuestKillGoal.cs" />
+    <Compile Include="Assets\Scripts\Quest\Quests List\SlayingQuest.cs" />
     <Compile Include="Assets\Scripts\Weapon\Fireball.cs" />
     <Compile Include="Assets\Scripts\Weapon\IProjectileWeapon.cs" />
     <Compile Include="Assets\Scripts\Weapon\IWeapon.cs" />

@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class Interactable : MonoBehaviour
 {
-    [HideInInspector]
     public NavMeshAgent playerAgent;
     private bool hasInteracted;
     bool isEnemy;
@@ -15,7 +14,7 @@ public class Interactable : MonoBehaviour
         isEnemy = gameObject.tag == "Enemy";
         hasInteracted = false;
         this.playerAgent = playerAgent;
-        playerAgent.stoppingDistance = 3f;
+        playerAgent.stoppingDistance = 4f;
         playerAgent.destination = GetTargetPosition();
         EnsureLookDirection();
     }
