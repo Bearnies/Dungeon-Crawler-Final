@@ -3,8 +3,7 @@
 
  **Nhóm 12: Game End**  
       1612286 - Nguyễn Hồng Khang   
-      1612290 - Long Vĩ Khang   
-      1612439 - Mã Cẩm Nguyên   
+      1612290 - Long Vĩ Khang    
 
 # Thông tin cơ bản về game:
 
