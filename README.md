@@ -23,9 +23,10 @@
       + Tấn công bằng Space.
       + Nhặt vật phẩm bằng cách nhấp chuột trái vào vật phẩm.
       + Bấm I để mở kho đồ, nhấp chuột trái vào trang bị thì cho thấy mô tả của trang bị đó, nhấp vào Equip/ Use để sử dụng món trang bị.
+      + Có thể sử dụng mỗi lọ Potion Log để hồi 30 HP.
       + Trang bị giúp người chơi có sức tấn công cao hơn.
       + Tùy vào sức tấn công mà trừ máu khi tấn công đối thủ.
-      + Hiện đang có 2 loại vũ khí: Sword và Staff, Sword đánh tầm gần, Staff có thể bắn cầu lửa để tấn công đối thủ
+      + Hiện đang có 2 loại vũ khí: Sword và Staff, Sword đánh tầm gần, Staff có thể bắn cầu lửa để tấn công đối thủ.
       + Khi bị đánh bại thì quay lại từ đầu của màn chơi.
       
     - Quái vật:
