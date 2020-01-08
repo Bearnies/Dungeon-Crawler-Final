@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -29,8 +30,16 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Player's dead. Reset health.");
-        this.currentHealth = this.maxHealth;
+        Debug.Log("Player's dead. Resetting level");
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+        //this.currentHealth = this.maxHealth;
+        //UIEventHandler.HealthChanged(this.currentHealth, this.maxHealth);
+    }
+
+    public void RegainHealth(int amount)
+    {
+        this.currentHealth = this.currentHealth + amount;
         UIEventHandler.HealthChanged(this.currentHealth, this.maxHealth);
     }
 }

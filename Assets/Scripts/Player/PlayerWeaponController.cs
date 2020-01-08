@@ -14,11 +14,18 @@ public class PlayerWeaponController : MonoBehaviour
 
     CharactersStats charactersStats;
 
+    public AudioClip audioClip;
+    public AudioSource audioSource { get { return GetComponent<AudioSource>(); } }
+
     // Start is called before the first frame update
     void Start()
     {
         spawnProjectile = transform.Find("ProjectileSpawn"); //FindChild
         charactersStats = GetComponent<Player>().charactersStats;
+
+        gameObject.AddComponent<AudioSource>();
+        audioSource.clip = audioClip;
+        audioSource.playOnAwake = false;
     }
 
     // Update is called once per frame
@@ -26,6 +33,7 @@ public class PlayerWeaponController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            audioSource.PlayOneShot(audioClip);
             PerformWeaponAttack();
         }
         if (Input.GetKeyDown(KeyCode.E))
@@ -42,8 +50,6 @@ public class PlayerWeaponController : MonoBehaviour
             charactersStats.RemoveBonusStats(EquippedWeapon.GetComponent<IWeapon>().Stats); //Remove current weapon's stats from player
             Destroy(playerHand.transform.GetChild(0).gameObject); //Destroy the current weapon on player's hand 
         }
-
-
 
         EquippedWeapon = (GameObject)Instantiate(Resources.Load<GameObject>("Weapons/" + itemToEquip.ObjectSlug), playerHand.transform.position, playerHand.transform.rotation);
         //Get the prefab named "Sword" from the "Resources" folder and set the weapon to the player's hand

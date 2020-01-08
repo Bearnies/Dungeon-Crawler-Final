@@ -11,11 +11,18 @@ public class PortalController : MonoBehaviour
     private Player player;
     private GameObject panel;
 
+    public AudioClip audioClip;
+    public AudioSource audioSource { get { return GetComponent<AudioSource>(); } }
+
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<Player>();
         panel = transform.Find("Panel_Portals").gameObject;
+
+        gameObject.AddComponent<AudioSource>();
+        audioSource.clip = audioClip;
+        audioSource.playOnAwake = false;
     }
 
     public void OnActivatePortal (Portal[] portals)
@@ -32,6 +39,7 @@ public class PortalController : MonoBehaviour
 
     public void OnPortalButtonClick (int portalIndex, Portal portal)
     {
+        audioSource.PlayOneShot(audioClip);
         player.transform.position = portal.TeleportFrom;
         foreach (Button button in GetComponentsInChildren<Button>())
         {

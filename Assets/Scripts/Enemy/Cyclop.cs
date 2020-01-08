@@ -20,14 +20,17 @@ public class Cyclop : MonoBehaviour, IEnemy
     private CharactersStats charactersStats;
     private Collider[] withinAggroColliders;
 
+    public AudioClip audioClip;
+    public AudioSource audioSource { get { return GetComponent<AudioSource>(); } }
+
     // Start is called before the first frame update
     void Start()
     {
         DropTable = new DropTable();
         DropTable.loot = new List<LootDrop>
         {
-            //25% Drop chance
-            new LootDrop("Potion_Log", 25)
+            new LootDrop("Potion_Log", 40),
+            new LootDrop("Potion_Log", 40)
         };
 
         Id = 2;
@@ -35,6 +38,10 @@ public class Cyclop : MonoBehaviour, IEnemy
         navAgent = GetComponent<NavMeshAgent>();
         charactersStats = new CharactersStats(15, 5, 3);
         currentHealth = maxHealth;
+
+        gameObject.AddComponent<AudioSource>();
+        audioSource.clip = audioClip;
+        audioSource.playOnAwake = false;
     }
 
     void FixedUpdate()
@@ -48,7 +55,8 @@ public class Cyclop : MonoBehaviour, IEnemy
 
     public void PerformAttack()
     {
-        player.TakeDamage(5);
+        audioSource.PlayOneShot(audioClip);
+        player.TakeDamage(15);
     }
 
     public void TakeDamage(int damageTaken)

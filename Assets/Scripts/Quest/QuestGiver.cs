@@ -13,6 +13,7 @@ public class QuestGiver : NPC
 
     public override void Interact()
     {
+        audioSource.PlayOneShot(audioClip);
         if (!AssignedQuest && !NPCHelped)
         {
             base.Interact();

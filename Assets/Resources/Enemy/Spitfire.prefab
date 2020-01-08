@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7607773466097111588}
   - component: {fileID: 7607773466097111595}
   - component: {fileID: 7607773466097111593}
-  - component: {fileID: 114961360535673656}
   - component: {fileID: 7607773466097111590}
   - component: {fileID: 114173762682227002}
+  - component: {fileID: 114961360535673656}
   m_Layer: 0
   m_Name: Spitfire
   m_TagString: Enemy
@@ -57,6 +57,40 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0766826, z: 1}
   m_Center: {x: 0, y: 0.038341284, z: 0}
+--- !u!195 &7607773466097111590
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7607773466097111599}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 2
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &114173762682227002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7607773466097111599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c83563e2a2743942816ba60ec28dcce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114961360535673656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,40 +110,7 @@ MonoBehaviour:
   maxHealth: 100
   pickupItem: {fileID: 7364783824047846140, guid: d7c80cf8fdc01dc479aaa48893d7d752,
     type: 3}
---- !u!195 &7607773466097111590
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7607773466097111599}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 2
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &114173762682227002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7607773466097111599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c83563e2a2743942816ba60ec28dcce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 8972d6af074621b4eba098328d04d3e2, type: 3}
 --- !u!1001 &4630452054874141877
 PrefabInstance:
   m_ObjectHideFlags: 0

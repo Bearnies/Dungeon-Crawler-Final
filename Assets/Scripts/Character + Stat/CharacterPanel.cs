@@ -23,6 +23,8 @@ public class CharacterPanel : MonoBehaviour
     [SerializeField] private Image weaponIcon;
     private List<Text> weaponStatTexts = new List<Text>();
 
+    public int currentHealth;
+
     //Init
     void Awake()
     {
@@ -41,16 +43,16 @@ public class CharacterPanel : MonoBehaviour
         InitializeStats();
     }
 
-    void UpdateHealth(int currentHealth, int maxHealth)
+    public void UpdateHealth(int currentHealth, int maxHealth)
     {
         this.health.text = currentHealth.ToString();
         this.healthFill.fillAmount = (float)currentHealth / (float)maxHealth;
     }
 
     void UpdateLevel()
-    {
+    {  
         this.level.text = player.PlayerLevel.Level.ToString();
-        this.levelFill.fillAmount = (float)player.PlayerLevel.CurrentExperience / (float)player.PlayerLevel.RequiredExperience;
+        this.levelFill.fillAmount = (float)player.PlayerLevel.CurrentExperience / (float)player.PlayerLevel.RequiredExperience; 
     }
 
     void InitializeStats()

@@ -8,9 +8,12 @@ public class PlayerLevel : MonoBehaviour
     public int CurrentExperience { get; set; }
     public int RequiredExperience { get { return Level * 25; } }
 
+    Player player;
+
     // Start is called before the first frame update
     void Start()
     {
+        player = GetComponent<Player>();
         CombatEvents.OnEnemyDeath += EnemyToExperience;
         Level = 1;
     }
@@ -27,6 +30,7 @@ public class PlayerLevel : MonoBehaviour
         {
             CurrentExperience -= RequiredExperience;
             Level++;
+            player.RegainHealth(100 - player.currentHealth);
         }
         UIEventHandler.PlayerLevelChanged();
     }

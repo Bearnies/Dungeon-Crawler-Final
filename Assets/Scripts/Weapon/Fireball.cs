@@ -10,13 +10,34 @@ public class Fireball : MonoBehaviour
 
     Vector3 spawnPosition;
 
+    public AudioClip audioClip;
+    public AudioSource audioSource { get { return GetComponent<AudioSource>(); } }
+
+    public AudioClip hitaudioClip;
+    public AudioSource hitaudioSource { get { return GetComponent<AudioSource>(); } }
+    public ParticleSystem fireballExplosion;
+
+    //void Awake()
+    //{
+    //    fireballExplosion = GetComponent<ParticleSystem>();
+    //}
+
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.AddComponent<AudioSource>();
+        audioSource.clip = audioClip;
+        audioSource.playOnAwake = false;
+
+        hitaudioSource.clip = hitaudioClip;
+        hitaudioSource.playOnAwake = false;
+
         Range = 20f;
         Damage = 14;
         GetComponent<Rigidbody>().AddForce(Direction * 50f); //Move the object using Physics engine
         spawnPosition = transform.position;
+
+        audioSource.PlayOneShot(audioClip);
     }
 
     // Update is called once per frame
@@ -35,10 +56,14 @@ public class Fireball : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        AudioSource.PlayClipAtPoint(hitaudioClip, new Vector3(transform.position.x, transform.position.y, transform.position.z));
+        fireballExplosion.Play();
+
         if (collision.transform.tag == "Enemy")
         {
             collision.transform.GetComponent<IEnemy>().TakeDamage(Damage);
         }
+        
         ExtinguishFireball();
     }
 }
