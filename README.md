@@ -36,4 +36,3 @@
             . Cyclop: máu rất cao, tốc độ di chuyển thấp.
       + Khi không thấy người chơi thì sẽ đứng yên, thấy người chơi thì đuổi theo, đến đủ gần người chơi thì sẽ tấn công. Khi bị đánh bại thì biến mất.
       + Có sức tấn công, máu nhất định.
-      + Khi bị đánh bại thì biến mất.
