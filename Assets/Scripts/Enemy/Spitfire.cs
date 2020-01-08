@@ -48,7 +48,7 @@ public class Spitfire : MonoBehaviour, IEnemy
 
     public void PerformAttack()
     {
-        player.TakeDamage(5);
+        player.TakeDamage(10);
     }
 
     public void TakeDamage(int damageTaken)

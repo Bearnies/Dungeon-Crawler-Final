@@ -23,12 +23,19 @@ public class CharacterPanel : MonoBehaviour
     [SerializeField] private Image weaponIcon;
     private List<Text> weaponStatTexts = new List<Text>();
 
+    //Init
+    void Awake()
+    {
+        UIEventHandler.OnPlayerHealthChanged += UpdateHealth;
+        UIEventHandler.OnStatsChanged += UpdateStats;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         playerWeaponController = player.GetComponent<PlayerWeaponController>();
-        UIEventHandler.OnPlayerHealthChanged += UpdateHealth;
-        UIEventHandler.OnStatsChanged += UpdateStats;
+        //UIEventHandler.OnPlayerHealthChanged += UpdateHealth;
+        //UIEventHandler.OnStatsChanged += UpdateStats;
         UIEventHandler.OnItemEquipped += UpdateEquippedWeapon;
         UIEventHandler.OnPlayerLevelChange += UpdateLevel;
         InitializeStats();

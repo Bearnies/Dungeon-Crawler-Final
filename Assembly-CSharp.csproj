@@ -57,6 +57,8 @@
   <ItemGroup>
     <Compile Include="Assets\RPGPackFree\Scripts\BowString.cs" />
     <Compile Include="Assets\RPGPackFree\Scripts\OpenChest.cs" />
+    <Compile Include="Assets\Scripts\Animator\EnemyAnimator.cs" />
+    <Compile Include="Assets\Scripts\Animator\PlayerAnimator.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Character + Stat\BaseStats.cs" />
     <Compile Include="Assets\Scripts\Character + Stat\BonusStats.cs" />

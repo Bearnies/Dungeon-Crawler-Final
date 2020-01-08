@@ -33,7 +33,7 @@ public class Slime : MonoBehaviour, IEnemy
         Id = 0;
         Experience = 50;
         navAgent = GetComponent<NavMeshAgent>();
-        charactersStats = new CharactersStats(6, 10, 2);
+        charactersStats = new CharactersStats(5, 10, 2);
         currentHealth = maxHealth;
     }
 

@@ -14,7 +14,7 @@ public class Fireball : MonoBehaviour
     void Start()
     {
         Range = 20f;
-        Damage = 10;
+        Damage = 14;
         GetComponent<Rigidbody>().AddForce(Direction * 50f); //Move the object using Physics engine
         spawnPosition = transform.position;
     }
