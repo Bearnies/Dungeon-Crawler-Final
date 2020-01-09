@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject optionScreen, pauseScreen;
     public string mainMenuSceen;
 
-    private bool isPause;
+    public bool isPause;
 
     public GameObject LoadingScreen, loadingIcon;
 

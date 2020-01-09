@@ -40,8 +40,19 @@ public class InventoryUI : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            characterInfo.gameObject.SetActive(infoIsActive);
-            infoIsActive = !infoIsActive;
+            if (menuIsActive == true)
+            {
+                menuIsActive = false;
+                infoIsActive = false;
+                inventoryPanel.gameObject.SetActive(menuIsActive);
+                characterPanel.gameObject.SetActive(menuIsActive);
+                characterInfo.gameObject.SetActive(infoIsActive);
+            }
+            else
+            {
+                characterInfo.gameObject.SetActive(infoIsActive);
+                infoIsActive = !infoIsActive;
+            }
         }
     }
 

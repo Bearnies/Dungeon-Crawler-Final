@@ -52,7 +52,7 @@
     {
         "ObjectSlug": "Potion_Log",
         "ItemName": "Log Potion",
-        "Description": "A potion that logs something to the console.",
+        "Description": "A potion that heals 30 HP.",
         "ItemType": "Consumable",
         "ActionName": "Drink",
         "ItemModifier": 0

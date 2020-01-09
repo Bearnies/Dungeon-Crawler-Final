@@ -101,7 +101,7 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 3fbb1a5ffeb0d2dc3502a3dae62a7533 Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingBehaviour
 a4f53786c5e89397b7d34957535b29a9 Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.NoiseAndScratches
-a852905b2c0e50e533926e6f6d0b4c55 Assembly-CSharp.dll:.PauseMenu
+1f115ecf71e37f468b07a5d8d8d7f8bf Assembly-CSharp.dll:.PauseMenu
 a77466ddc42aa6769780e42efe2a1bfa Assembly-CSharp.dll:.CameraController
 47f7902f8963babdce608bf76d778b9c Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.Antialiasing
 03c4a803c7b9b354425a8edc787ee988 Assembly-CSharp.dll:.NPC
