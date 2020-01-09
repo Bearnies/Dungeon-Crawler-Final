@@ -8,7 +8,7 @@
 # Thông tin cơ bản về game:
 
     Người chơi xuất hiện tại màn đầu của game, người chơi có thể nhặt các vật phẩm nằm rải rác trong khu vực và sử dụng để tăng sức tấn công, phòng thủ.
-    Người chơi có thể đi vòng quanh các khu vực tùy ý, hiện đang có 3 khu vực: Desert, Forest và Valley.
+    Người chơi có thể đi vòng quanh các khu vực tùy ý, hiện đang có 3 khu vực: Desert, Fortress và Lair.
     Người chơi có thể tương tác với các Viên pha lê khổng lồ, chức năng của chúng là dịch chuyển người chơi qua các khu vực tùy chọn.
     Người chơi có thể tương tác với các NPC, mỗi NPC sẽ có đoạn hội thoại khác nhau, có một vài NPC khi người chơi bắt chuyện thì sẽ giao cho người chơi Nhiệm vụ.
     Người chơi sau khi nhận Nhiệm vụ thì đi thực hiện, nếu hoàn thành thì quay về và nói chuyện với NPC đã giao nhiệm vụ thì sẽ được thưởng.
@@ -18,7 +18,8 @@
     - Nhiệm vụ:
       + Slaying Quest: yêu cầu đánh bại đúng số lượng của loại quái vật nhất định.
 
-    - Người chơi:   
+    - Người chơi:
+      + Có thể thay đổi tùy chỉnh trong Game Menu bằng cách nhấp Escape khi đang chơi và chọn mục Options.
       + Di chuyển bằng cấm nhấp chuột trái tại một điểm trên khu vực.
       + Tấn công bằng Space.
       + Nhặt vật phẩm bằng cách nhấp chuột trái vào vật phẩm.
