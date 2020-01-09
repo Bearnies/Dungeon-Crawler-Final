@@ -188,6 +188,10 @@
     <Compile Include="Assets\Scripts\Quest\QuestGoal.cs" />
     <Compile Include="Assets\Scripts\Quest\QuestKillGoal.cs" />
     <Compile Include="Assets\Scripts\Quest\Quests List\SlayingQuest.cs" />
+    <Compile Include="Assets\Scripts\UI\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\UI\OptionsMenu.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Weapon\Fireball.cs" />
     <Compile Include="Assets\Scripts\Weapon\IProjectileWeapon.cs" />
     <Compile Include="Assets\Scripts\Weapon\IWeapon.cs" />
