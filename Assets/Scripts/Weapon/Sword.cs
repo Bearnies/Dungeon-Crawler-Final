@@ -11,11 +11,18 @@ public class Sword : MonoBehaviour, IWeapon
 
     public bool InCombat { get; private set; }
 
+    public AudioClip audioClip;
+    public AudioSource audioSource { get { return GetComponent<AudioSource>(); } }
+
     // Start is called before the first frame update
     void Start()
     {
         //animator = GetComponent<Animator>();
         InCombat = false;
+
+        gameObject.AddComponent<AudioSource>();
+        audioSource.clip = audioClip;
+        audioSource.playOnAwake = false;
     }
 
     public void PerformAttack(int damage)
@@ -36,6 +43,7 @@ public class Sword : MonoBehaviour, IWeapon
     {
         if (collider.tag == "Enemy")
         {
+            audioSource.PlayOneShot(audioClip);
             collider.GetComponent<IEnemy>().TakeDamage(CurrentDamage);
         }
     }

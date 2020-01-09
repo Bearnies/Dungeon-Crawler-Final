@@ -27,7 +27,7 @@
     {
         "ObjectSlug": "Staff",
         "ItemName": "Staff",
-        "Description": "A magical staff that casts fireball.",
+        "Description": "A magical staff that casts fireballs.",
         "ItemType": "Weapon",
         "ActionName": "Equip",
         "ItemModifier": 0,
