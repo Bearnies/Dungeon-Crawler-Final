@@ -18,7 +18,8 @@
     - Nhiệm vụ:
       + Slaying Quest: yêu cầu đánh bại đúng số lượng của loại quái vật nhất định.
 
-    - Người chơi:   
+    - Người chơi:
+      + Có thể thay đổi tùy chỉnh trong Game Menu bằng cách nhấp Escape khi đang chơi và chọn mục Options.
       + Di chuyển bằng cấm nhấp chuột trái tại một điểm trên khu vực.
       + Tấn công bằng Space.
       + Nhặt vật phẩm bằng cách nhấp chuột trái vào vật phẩm.
