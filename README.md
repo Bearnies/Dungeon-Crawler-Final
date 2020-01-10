@@ -35,5 +35,6 @@
             . Slime: máu thấp, tốc độ di chuyển cao.
             . Spitfire: máu trung bình, tốc độ di chuyển trung bình.
             . Cyclop: máu rất cao, tốc độ di chuyển thấp.
-      + Khi không thấy người chơi thì sẽ đứng yên, thấy người chơi thì đuổi theo, đến đủ gần người chơi thì sẽ tấn công. Khi bị đánh bại thì biến mất.
+      + Khi không thấy người chơi thì sẽ đứng yên, thấy người chơi thì đuổi theo, đến đủ gần người chơi thì sẽ tấn công. 
+      + Khi bị đánh bại thì biến mất và có cơ hội rớt ra Item chứa vật phẩm cho người dùng nhặt.
       + Có sức tấn công, máu nhất định.
